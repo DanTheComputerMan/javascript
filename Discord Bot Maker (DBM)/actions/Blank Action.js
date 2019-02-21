@@ -165,9 +165,6 @@ action: function(cache) {
 		case 4:
 			
 			break;
-		case 5:
-			
-			break;
 	`END OF SWITCH STATEMENT`
 	}
 	
