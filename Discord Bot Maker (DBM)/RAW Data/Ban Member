@@ -1,0 +1,165 @@
+{
+  "name": "ban",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "0",
+      "varName2": "",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If Member"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "myself",
+      "name": "Get Bot as Member"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "BAN_MEMBERS",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "19",
+      "name": "Check Member Permissions"
+    },
+    {
+      "member": "2",
+      "varName": "myself",
+      "permission": "BAN_MEMBERS",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "21",
+      "name": "Check Member Permissions"
+    },
+    {
+      "condition": "0",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "13",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "13",
+      "name": "Check Parameters"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "memberID",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"memberID\")}",
+      "storage": "1",
+      "varName": "memberIDobject",
+      "name": "Find Member"
+    },
+    {
+      "storage": "1",
+      "varName": "memberIDobject",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "13",
+      "name": "Check Variable"
+    },
+    {
+      "member": "2",
+      "varName": "memberIDobject",
+      "reason": "${tempVars(\"reason\") || \"\"}",
+      "name": "Ban Member"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "I have successfully banned ${tempVars(\"memberIDobject\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "```\nPlease tag a user or enter their ID in order to ban them!\n!Ban [user] [reason]\n!Ban @SomeDude#12345 Illegal Activity\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "reason",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "reason": "${tempVars(\"reason\") || \"\"}",
+      "name": "Ban Member"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "I have successfully banned ${tempVars(\"memberIDobject\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You don't have the authority to ban members!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Sorry boss, even though ***you*** have the permission to ban members, I don't. I need that to enact the ban hammah upon thee!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_id": "jBKkn",
+  "_aliases": [
+    "hackban"
+  ]
+}
