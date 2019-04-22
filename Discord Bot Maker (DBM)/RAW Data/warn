@@ -1,0 +1,302 @@
+{
+  "name": "warn",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "CfidX",
+  "actions": [
+    {
+      "comment": "To disallow bots from running this command.",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "0",
+      "varName2": "",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If Member"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "MsgAuthorDisplayName",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "MentionedUserDisplayName",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "myself",
+      "name": "Get Bot as Member"
+    },
+    {
+      "comment": "Permission Check System",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "2",
+      "varName": "myself",
+      "permission": "BAN_MEMBERS",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "36",
+      "name": "Check Member Permissions"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "BAN_MEMBERS",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "38",
+      "name": "Check Member Permissions"
+    },
+    {
+      "comment": "Checking if the user used the command right.",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "condition": "0",
+      "comparison": "2",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "42",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "condition": "1",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "42",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "condition": "1",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "42",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "comment": "More permission checking.",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "13",
+      "storage": "1",
+      "varName2": "MemberBannableCheck",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "MemberBannableCheck",
+      "comparison": "1",
+      "value": "true",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "40",
+      "name": "Check Variable"
+    },
+    {
+      "comment": "Get # of warns to add to mentioned user.",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "WarnPointsToAdd",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "warns",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "2",
+      "iftrueVal": "24",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "comment": "No member data exists, so set initial warns to 0.",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "warns",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "call": "24",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Makes sure 2nd param is a number. If not, make it 1 point.",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "var warnpts = 1;\nif (tempVars(\"WarnPointsToAdd\")) {\n  // Store Warn Points to add.\n  warnpts = tempVars(\"WarnPointsToAdd\");\n  // Takes out everything except numbers;\n  warnpts = warnpts.replace(/[^0-9]/g,'');\n  // If there's no warn points specified, add 1 warn point.\n  if (warnpts===\"\") {warnpts=1};\n  // Gives back Warn Points to add.\n  warnpts = parseInt(warnpts);\n}\n// Sends variable off to DBM to process.\nthis.storeValue(warnpts, 1, \"addwarns\", cache);",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    },
+    {
+      "comment": "Add specified # of warn points to the mentioned user.",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "warns",
+      "changeType": "1",
+      "value": "tempVars(\"addwarns\")",
+      "name": "Control Member Data"
+    },
+    {
+      "comment": "Change **THIS NUMBER BELOW** to your cutoff point.",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "warns",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "checkedWarns",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "warns",
+      "comparison": "4",
+      "value": "5",
+      "iftrue": "2",
+      "iftrueVal": "32",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"MsgAuthorDisplayName\")}, you've warned ${tempVars(\"MentionedUserDisplayName\")} for ${tempVars(\"addwarns\")} points!\n${tempVars(\"MentionedUserDisplayName\")} now has ${tempVars(\"checkedWarns\")} warn points.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Ban Member"
+    },
+    {
+      "comment": "Response message if they reach the cutoff point.",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"MentionedUserDisplayName\")} has been banned for accruing too many warn points. Good grief!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "I don't have the permission to ban members! I need this b/c if a user reaches a certain number of warn points, they get banned.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You don't have the permission to ban members! You need this b/c if a user reaches a certain number of warn points, they get banned.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "I can't warn that user. They are a higher authority level than you!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Command Usage: \n```toml\n${server.tag}warn [user] [amount]\nExample:\n${server.tag}warn @SomeDude#12345 3\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "0"
+}
