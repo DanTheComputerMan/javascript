@@ -5,22 +5,6 @@
   "_id": "CfidX",
   "actions": [
     {
-      "comment": "To disallow bots from running this command.",
-      "color": "#80ff00",
-      "name": "Comment"
-    },
-    {
-      "member": "1",
-      "varName": "",
-      "info": "0",
-      "varName2": "",
-      "iftrue": "1",
-      "iftrueVal": "",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "name": "Check If Member"
-    },
-    {
       "member": "1",
       "varName": "",
       "info": "3",
