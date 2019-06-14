@@ -1,3 +1,12 @@
+# THIS COMMAND REQUIRES THE FOLLOWING NODE MODULES TO WORK:
+`canvas` and `color-convert`. If you don't have these, open up your command prompt / cmd.exe and type both of these:
+```js
+npm i canvas
+```
+```js
+npm i color-convert
+```
+
 This command supports multiple formats, listed below:
 ```yaml
 blue	yellow	green
