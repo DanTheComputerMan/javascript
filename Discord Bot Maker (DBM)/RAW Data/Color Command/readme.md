@@ -44,3 +44,6 @@ const CGs_colors = {
 ```
 MAKE SURE THOUGH to have the final line NOT include a comma. Here's an example of this in action:
 ![Image description](https://i.imgur.com/choZ5qa.png)
+
+
+Known Issue: `black` color name does not show up properly.
