@@ -6,6 +6,10 @@ npm i canvas
 ```js
 npm i color-convert
 ```
+If you're *still* having issues with it, run this and wait (it takes awhile), then install `npm i canvas` again:
+```js
+npm install --global --production windows-build-tools
+```
 
 This command supports multiple formats, listed below:
 ```yaml
