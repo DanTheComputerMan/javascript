@@ -32,6 +32,23 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
 
 **`!BadWordSetup addwords word1:word2 | word2:word5|word3:word99|word4:word15:delete|multiple words:1500| multiple words 2:niceness:ban`**
 
+## Config menu guide
+**`!BadWordSetup config usertype check`**   Checks the current user type (*@mention* or *usertag*) This will show up as @CoolGuy or CoolGuy#9889
+**`!BadWordSetup config wordtype check`**   Checks the current word matching method (*matchany*, *matchanycasingmatters*, *matchword*, or *matchwordcasingmatters*)
+
+***Breakdown:     (Sample string user typed: `Oh Hello Bob, I am going to the store today.`)   and the bad word `hell`.***
+###### `matchany`: Does match. Exact 'hell' found in string (doesn't count casing). Doesn't matter that o is after hell *(Not recommended)*.
+###### `matchanycasingmatters`: Does not match. Exact 'hell' not found in string (casing matters) *(Also not recommended)*.
+###### `matchword`: Does not match. 'hell' word is not found b/c it's part of a larger word 'hello' (regardless of casing) *(recommended method)*.
+###### `matchwordcasingmatters`: Does not match. 'hell' word is not found b/c it's part of a larger word 'hello'.
+
+***Another Example:     (Sample string user typed: `Oh Hell Bob, that sucks for you, considering you're inhell`)   and the bad word `hell`.***
+###### `matchany`: Does match. Exact 'hell' found in string (doesn't count casing).
+###### `matchanycasingmatters`: Does match. Exact 'hell' found in string.
+###### `matchword`: Does match. 'hell' is found (regardless of casing) *(recommended method)*.
+###### `matchwordcasingmatters`: Does not match. 'hell' word is not found (casing matters).
+
+
 
 Future features planned (and ones completed):
 - [x] Added config option
