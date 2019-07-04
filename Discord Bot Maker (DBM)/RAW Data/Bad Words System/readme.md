@@ -8,7 +8,7 @@ If you're *still* having issues with it, run this and wait (it takes awhile), th
 npm install --global --production windows-build-tools
 ```
 
-For best results, place the bot with admin permissions, and with the highest role. Regardless of your setup however, this cannot kick/ban the server owner, based on the Discord API; it can still delete their offending message though. At the bare minimum, the bot needs `manage messages` permission to operate.
+For best results, place the bot with admin permissions, and with the highest role. Regardless of your setup however, this cannot kick/ban the server owner, based on the Discord API; it can still delete their offending message though. At the bare minimum, the bot needs `manage messages` permission to operate, and the `kick, ban, and manage messages` permissions to setup this system.
 
 ## Guide on how to use the system:
 For this example, the prefix will be `!`. Yours may vary, and if so, substitute your prefix instead.
