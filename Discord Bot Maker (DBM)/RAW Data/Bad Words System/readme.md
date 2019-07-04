@@ -35,4 +35,5 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
 
 Future features planned (and ones completed):
 - [x] Added config option
+- [x] Added log channel
 - [ ] Character subsitution (@ = a)
