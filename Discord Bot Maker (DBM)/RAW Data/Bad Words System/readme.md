@@ -15,4 +15,10 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
 ```css
 !BadWordSetup guide         (Shows you this page)
 !BadWordSetup check         (Checks if the system is enabled or disabled).
+!BadWordSetup enable        (Enables the system if it isn't enabled already).
+!BadWordSetup disable       (Disables the system if it isn't disabled already).
+!BadWordSetup addwords      (Adds bad words to the list).
+!BadWordSetup delwords      (Removes bad words from the list. MAKE SURE YOU HAVE THE SYSTEM DISABLED FIRST!!!).
+!BadWordSetup config        (Various config options on how to customize the way it identifies bad words).
+!BadWordSetup logchannel    (Sets the bad word (and error) log channel for the bot).
 ```
