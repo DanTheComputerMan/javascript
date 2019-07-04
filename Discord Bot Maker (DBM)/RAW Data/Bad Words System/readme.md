@@ -51,7 +51,7 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
 
 
 Future features planned (and ones completed):
-- [x] Added config option
 - [x] Added log channel
+- [x] Added config option
 - [ ] Character subsitution (@ = a)
 - [ ] Character set match types (A-z, À-ÖØ-öø-ÿ) (I'm not talking about it supporting unicode as it does that already).
