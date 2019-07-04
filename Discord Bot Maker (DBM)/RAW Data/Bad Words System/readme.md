@@ -31,3 +31,8 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
 **`!BadWordSetup addwords word1:delete| word2:ban|word3:kick|word4:ban|multiple words:kick| multiple words 2:delete`**   You can also have words/phrases that include the colon character `:` as well:
 
 **`!BadWordSetup addwords word1:word2 | word2:word5|word3:word99|word4:word15:delete|multiple words:1500| multiple words 2:niceness:ban`**
+
+
+Future features planned (and ones completed):
+- [x] Added config option
+- [ ] Character subsitution (@ = a)
