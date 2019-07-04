@@ -8,7 +8,9 @@ If you're *still* having issues with it, run this and wait (it takes awhile), th
 npm install --global --production windows-build-tools
 ```
 
-For best results, place the bot with admin permissions, and with the highest role. Regardless of your setup however, this cannot kick/ban the server owner, based on the Discord API; it can still delete their offending message though. At the bare minimum, the bot needs `manage messages` permission to operate, and the `kick, ban, and manage messages` permissions to setup this system.
+For best results, place the bot with admin permissions, and with the highest role. Regardless of your setup however, this cannot kick/ban the server owner, based on the Discord API; it can still delete their offending message though.
+To setup this system, you must either be the server owner, have `administrator` permission, or have the `manage guild` permission. In addition, the bot must also have these permissions : `kick, ban, and manage messages`. This is not the case when the system is turned on, it just applies to setting up the bot. At the bare minimum, the bot requires `manage messages` permission to properly function and delete the messages.
+
 
 ## Guide on how to use the system:
 For this example, the prefix will be `!`. Yours may vary, and if so, substitute your prefix instead.
@@ -59,6 +61,29 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
 ###### `matchwordcasingmatters`: Does not match. 'hell' word is not found (casing matters).
 </p></details>
 
+
+
+## Delete words guide   
+<details>
+  <summary>Click to view/hide</summary>
+  <p>
+<!--  -->
+    
+**`!BadWordSetup delwords word1 | word2|word3|word4|multiple words| multiple words 2`**   Doing this will remove each word split by the pipe character `|` from the bad word list. __**REMEMBER TO DISABLE THE SYSTEM FIRST, AS THE BOT WILL TRY TO DELETE THOSE WORDS**__
+
+</p></details>
+
+
+
+## Log channel guide   
+<details>
+  <summary>Click to view/hide</summary>
+  <p>
+<!--  -->
+    
+**`!BadWordSetup logchannel #bad-word-log`**   Mention a channel to set that channel as the log channel for your guild.
+
+</p></details>
 
 
 
