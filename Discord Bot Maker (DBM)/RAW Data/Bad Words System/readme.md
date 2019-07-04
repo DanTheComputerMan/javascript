@@ -54,3 +54,4 @@ Future features planned (and ones completed):
 - [x] Added config option
 - [x] Added log channel
 - [ ] Character subsitution (@ = a)
+- [ ] Character set match types (A-z, À-ÖØ-öø-ÿ) (I'm not talking about it supporting unicode as it does that already).
