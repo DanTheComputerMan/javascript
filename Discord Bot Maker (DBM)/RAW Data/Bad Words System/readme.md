@@ -1,5 +1,5 @@
 # THIS COMMAND REQUIRES THE FOLLOWING NODE MODULE TO WORK: `quick.db`
-`quick.db` If you don't have this, open up your command prompt / cmd.exe and type this:
+If you don't have this, open up your command prompt / cmd.exe and type this:
 ```css
 npm i quick.db@7.0.0-b21
 ```
