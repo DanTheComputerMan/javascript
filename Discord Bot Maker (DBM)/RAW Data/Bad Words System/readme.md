@@ -42,7 +42,8 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
   <p>
 <!--  -->
     
-**`!BadWordSetup config usertype check`**   Checks the current user type (*@mention* or *usertag*) This will show up as @CoolGuy or CoolGuy#9889
+**`!BadWordSetup config usertype check`**   Checks the current user type (*@mention* or *usertag*) This will show up as [@CoolGuy](https://github.com/DanTheComputerMan/javascript/edit/master/Discord%20Bot%20Maker%20(DBM)/RAW%20Data/Bad%20Words%20System/readme.md) or CoolGuy#9889
+
 **`!BadWordSetup config wordtype check`**   Checks the current word matching method (*matchany*, *matchanycasingmatters*, *matchword*, or *matchwordcasingmatters*)
 
 ***Breakdown:     (Sample string user typed: `Oh Hello Bob, I am going to the store today.`)   and the bad word `hell`.***
