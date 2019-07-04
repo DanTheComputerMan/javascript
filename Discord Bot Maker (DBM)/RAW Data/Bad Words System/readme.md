@@ -22,17 +22,26 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
 !BadWordSetup config        (Various config options on how to customize the way it identifies bad words).
 !BadWordSetup logchannel    (Sets the bad word (and error) log channel for the bot).
 ```
-
-
-## Add words guide
-
+## Add words guide    
+<details>
+  <summary>Click to view/hide</summary>
+  <p>
+<!--  -->
+    
 **`!BadWordSetup addwords word1 | word2|word3|word4|multiple words| multiple words 2`**   Doing this will add each word split by the pipe character `|`, and assign it the delete action. You can also do:
 
 **`!BadWordSetup addwords word1:delete| word2:ban|word3:kick|word4:ban|multiple words:kick| multiple words 2:delete`**   You can also have words/phrases that include the colon character `:` as well:
 
 **`!BadWordSetup addwords word1:word2 | word2:word5|word3:word99|word4:word15:delete|multiple words:1500| multiple words 2:niceness:ban`**
+</p></details>
 
-## Config menu guide
+
+## Config menu guide   
+<details>
+  <summary>Click to view/hide</summary>
+  <p>
+<!--  -->
+    
 **`!BadWordSetup config usertype check`**   Checks the current user type (*@mention* or *usertag*) This will show up as @CoolGuy or CoolGuy#9889
 **`!BadWordSetup config wordtype check`**   Checks the current word matching method (*matchany*, *matchanycasingmatters*, *matchword*, or *matchwordcasingmatters*)
 
@@ -47,6 +56,8 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
 ###### `matchanycasingmatters`: Does match. Exact 'hell' found in string.
 ###### `matchword`: Does match. 'hell' is found (regardless of casing) *(recommended method)*.
 ###### `matchwordcasingmatters`: Does not match. 'hell' word is not found (casing matters).
+</p></details>
+
 
 
 
