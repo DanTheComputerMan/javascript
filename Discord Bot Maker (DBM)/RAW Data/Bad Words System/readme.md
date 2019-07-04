@@ -24,7 +24,7 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
 ```
 
 
-##Add words guide
+## Add words guide
 
 **`!BadWordSetup addwords word1 | word2|word3|word4|multiple words| multiple words 2`**   Doing this will add each word split by the pipe character `|`, and assign it the delete action. You can also do:
 
