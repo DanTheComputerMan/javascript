@@ -15,14 +15,14 @@ To setup this system, you must either be the server owner, have `administrator` 
 ## Guide on how to use the system:
 For this example, the prefix will be `!`. Yours may vary, and if so, substitute your prefix instead.
 ```css
-!BadWordSetup guide         (Shows you this page)
-!BadWordSetup check         (Checks if the system is enabled or disabled).
-!BadWordSetup enable        (Enables the system if it isn't enabled already).
-!BadWordSetup disable       (Disables the system if it isn't disabled already).
-!BadWordSetup addwords      (Adds bad words to the list).
-!BadWordSetup delwords      (Removes bad words from the list. MAKE SURE YOU HAVE THE SYSTEM DISABLED FIRST!!!).
-!BadWordSetup config        (Various config options on how to customize the way it identifies bad words).
-!BadWordSetup logchannel    (Sets the bad word (and error) log channel for the bot).
+!BadWordsSetup guide         (Shows you this page)
+!BadWordsSetup check         (Checks if the system is enabled or disabled).
+!BadWordsSetup enable        (Enables the system if it isn't enabled already).
+!BadWordsSetup disable       (Disables the system if it isn't disabled already).
+!BadWordsSetup addwords      (Adds bad words to the list).
+!BadWordsSetup delwords      (Removes bad words from the list. MAKE SURE YOU HAVE THE SYSTEM DISABLED FIRST!!!).
+!BadWordsSetup config        (Various config options on how to customize the way it identifies bad words).
+!BadWordsSetup logchannel    (Sets the bad word (and error) log channel for the bot).
 ```
 ## Add words guide    
 <details>
