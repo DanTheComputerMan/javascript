@@ -30,11 +30,11 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
   <p>
 <!--  -->
     
-**`!BadWordSetup addwords word1 | word2|word3|word4|multiple words| multiple words 2`**   Doing this will add each word split by the pipe character `|`, and assign it the delete action. You can also do:
+**`!BadWordsSetup addwords word1 | word2|word3|word4|multiple words| multiple words 2`**   Doing this will add each word split by the pipe character `|`, and assign it the delete action. You can also do:
 
-**`!BadWordSetup addwords word1:delete| word2:ban|word3:kick|word4:ban|multiple words:kick| multiple words 2:delete`**   You can also have words/phrases that include the colon character `:` as well:
+**`!BadWordsSetup addwords word1:delete| word2:ban|word3:kick|word4:ban|multiple words:kick| multiple words 2:delete`**   You can also have words/phrases that include the colon character `:` as well:
 
-**`!BadWordSetup addwords word1:word2 | word2:word5|word3:word99|word4:word15:delete|multiple words:1500| multiple words 2:niceness:ban`**
+**`!BadWordsSetup addwords word1:word2 | word2:word5|word3:word99|word4:word15:delete|multiple words:1500| multiple words 2:niceness:ban`**
 </p></details>
 
 
@@ -44,9 +44,9 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
   <p>
 <!--  -->
     
-**`!BadWordSetup config usertype check`**   Checks the current user type (*@mention* or *usertag*) This will show up as [@CoolGuy](https://github.com/DanTheComputerMan/javascript/edit/master/Discord%20Bot%20Maker%20(DBM)/RAW%20Data/Bad%20Words%20System/readme.md) or CoolGuy#9889
+**`!BadWordsSetup config usertype check`**   Checks the current user type (*@mention* or *usertag*) This will show up as [@CoolGuy](https://github.com/DanTheComputerMan/javascript/edit/master/Discord%20Bot%20Maker%20(DBM)/RAW%20Data/Bad%20Words%20System/readme.md) or CoolGuy#9889
 
-**`!BadWordSetup config wordtype check`**   Checks the current word matching method (*matchany*, *matchanycasingmatters*, *matchword*, or *matchwordcasingmatters*)
+**`!BadWordsSetup config wordtype check`**   Checks the current word matching method (*matchany*, *matchanycasingmatters*, *matchword*, or *matchwordcasingmatters*)
 
 ***Breakdown:     (Sample string user typed: `Oh Hello Bob, I am going to the store today.`)   and the bad word `hell`.***
 ###### `matchany`: Does match. Exact 'hell' found in string (doesn't count casing). Doesn't matter that o is after hell *(Not recommended)*.
@@ -69,7 +69,7 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
   <p>
 <!--  -->
     
-**`!BadWordSetup delwords word1 | word2|word3|word4|multiple words| multiple words 2`**   Doing this will remove each word split by the pipe character `|` from the bad word list. __**REMEMBER TO DISABLE THE SYSTEM FIRST, AS THE BOT WILL TRY TO DELETE THOSE WORDS**__
+**`!BadWordsSetup delwords word1 | word2|word3|word4|multiple words| multiple words 2`**   Doing this will remove each word split by the pipe character `|` from the bad word list. __**REMEMBER TO DISABLE THE SYSTEM FIRST, AS THE BOT WILL TRY TO DELETE THOSE WORDS**__
 
 </p></details>
 
@@ -81,7 +81,7 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
   <p>
 <!--  -->
     
-**`!BadWordSetup logchannel #bad-word-log`**   Mention a channel to set that channel as the log channel for your guild.
+**`!BadWordsSetup logchannel #bad-word-log`**   Mention a channel to set that channel as the log channel for your guild.
 
 </p></details>
 
