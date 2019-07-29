@@ -87,7 +87,7 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
 
 
 
-Potenttial future features (and ones completed):
+Potential future features (and ones completed):
 - [x] Added log channel
 - [x] Added config option
 - [ ] Character subsitution (@ = a)
