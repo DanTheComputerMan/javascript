@@ -5,7 +5,7 @@ npm i quick.db@7.0.0-b21
 ```
 If you're *still* having issues with it, run this in powershell as an administrator and wait (it takes a while and can take up to 10 minutes or so), then install `npm i quick.db@7.0.0-b21` in cmd again after that:
 ```css
-npm -g --add-python-to-path install windows-build-tools node-gyp
+npm install --vs2015 -g windows-build-tools
 ```
 
 For best results, place the bot with admin permissions, and with the highest role. Regardless of your setup however, this cannot kick/ban the server owner, based on the Discord API; it can still delete their offending message though.
