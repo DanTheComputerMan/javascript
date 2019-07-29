@@ -3,10 +3,21 @@ If you don't have this, open up your command prompt / cmd.exe and type this:
 ```css
 npm i quick.db@7.0.0-b21
 ```
-If you're *still* having issues with it, run this in powershell as an administrator and wait (it takes a while and can take up to 10 minutes or so), then install `npm i quick.db@7.0.0-b21` in cmd again after that:
+If you're *still* having issues with it, run the below command in powershell as an administrator and wait (it takes a while and can take up to 10 minutes or so), then install `npm i quick.db@7.0.0-b21` in cmd again after that:
 ```css
 npm install --vs2015 -g windows-build-tools
 ```
+***STILL*** having issues? Alright, since your computer doesn't like being set up properly, we have to do this sequence:
+Powershell (as Administrator):
+```css
+npm i node-gyp
+npm install --global --production windows-build-tools
+```
+or
+```css
+npm -g --add-python-to-path install windows-build-tools node-gyp
+```
+*Note:* this may or may not work if you don't run this on Windows.
 
 For best results, place the bot with admin permissions, and with the highest role. Regardless of your setup however, this cannot kick/ban the server owner, based on the Discord API; it can still delete their offending message though.
 To setup this system, you must either be the server owner, have `administrator` permission, or have the `manage guild` permission. In addition, the bot must also have these permissions : `kick, ban, and manage messages`. This is not the case when the system is turned on, it just applies to setting up the bot. At the bare minimum, the bot requires `manage messages` permission to properly function and delete the messages.
