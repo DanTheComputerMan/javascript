@@ -3,7 +3,7 @@ If you don't have this, open up your command prompt / cmd.exe and type this:
 ```css
 npm i quick.db@7.0.0-b21
 ```
-If you're *still* having issues with it, run this and wait (it takes awhile), then install `npm i quick.db@7.0.0-b21` again:
+If you're *still* having issues with it, run this and wait (it takes a while and can take up to 10 minutes or so), then install `npm i quick.db@7.0.0-b21` again:
 ```css
 npm install --global --production windows-build-tools
 ```
