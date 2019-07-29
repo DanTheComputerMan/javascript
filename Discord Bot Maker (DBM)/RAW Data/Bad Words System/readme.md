@@ -1,9 +1,9 @@
 # THIS COMMAND REQUIRES THE FOLLOWING NODE MODULE TO WORK: `quick.db`
-If you don't have this, open up your command prompt / cmd.exe and type this:
+If you don't have this, open up your command prompt / cmd.exe (in your bot directory) and type this:
 ```css
 npm i quick.db@7.0.0-b21
 ```
-If you're *still* having issues with it, run the below command in powershell as an administrator and wait (it takes a while and can take up to 10 minutes or so), then install `npm i quick.db@7.0.0-b21` in cmd again after that:
+If you're *still* having issues with it, run the below command in powershell as an administrator and wait (it takes a while and can take up to 10 minutes or so), then install `npm i quick.db@7.0.0-b21` in cmd (in your bot directory) again after that:
 ```css
 npm install --vs2015 -g windows-build-tools
 ```
@@ -16,6 +16,10 @@ npm install --global --production windows-build-tools
 or
 ```css
 npm -g --add-python-to-path install windows-build-tools node-gyp
+```
+Now, after you do one of the above, and wait for it to finish, go back to cmd (in your bot directory), and type this one final time:
+```css
+npm i quick.db@7.0.0-b21
 ```
 *Note:* this may or may not work if you don't run this on Windows.
 
