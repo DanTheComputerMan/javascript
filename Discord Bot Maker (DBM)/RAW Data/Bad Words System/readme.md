@@ -107,4 +107,5 @@ Potential future features (and ones completed):
 - [x] Added config option
 - [ ] Wildcard support (* can be any character)
 - [ ] Character subsitution (@ = a)
+- [ ] Allowing per-server download-able lists (and potentially uploading full lists)
 - [ ] Character set match types (A-z, À-ÖØ-öø-ÿ) (I'm not talking about it supporting unicode as it does that already).
