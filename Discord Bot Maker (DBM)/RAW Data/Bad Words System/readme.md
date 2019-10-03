@@ -28,7 +28,7 @@ To setup this system, you must either be the server owner, have `administrator` 
 
 
 ## Guide on how to use the system:
-For this example, the prefix will be `!`. Yours may vary, and if so, substitute your prefix instead.
+For this example, the prefix will be `!`. Yours may vary, and if so, substitute your prefix instead. The default alias is `bws`.
 ```css
 !BadWordsSetup guide         (Shows you this page)
 !BadWordsSetup check         (Checks if the system is enabled or disabled).
@@ -105,5 +105,6 @@ For this example, the prefix will be `!`. Yours may vary, and if so, substitute 
 Potential future features (and ones completed):
 - [x] Added log channel
 - [x] Added config option
+- [ ] Wildcard support (* can be any character)
 - [ ] Character subsitution (@ = a)
 - [ ] Character set match types (A-z, À-ÖØ-öø-ÿ) (I'm not talking about it supporting unicode as it does that already).
