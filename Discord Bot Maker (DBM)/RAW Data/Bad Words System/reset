@@ -1,0 +1,19 @@
+{
+  "name": "reset",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "dpfLS",
+  "actions": [
+    {
+      "code": "// Javascript code here. Do NOT edit this or you will likely break it.\n(() => {\n\tconst ensure = this.getMods().require;\n\tconst db = ensure('quick.db');\n\n\tconst prefix = (server && server.tag) || this.getDBM().Files.data.settings.tag || \"!\";\n\n\tif (!member.hasPermission(\"ADMINISTRATOR\")) {\n\t\tmsg.reply(\"You must have the Administrator permission to perform this command.\");\n\t\tcache.index++; return Actions.callNextAction(cache);\n\t}\n\tmsg.reply(`WARNING! This will reset the entire Bad Word System for this server. This means all words and settings will be erased. This is only useful if something is messed up beyond repair. You should use **\\`${prefix}badwordsystem transferto\\`** first to download a settings file containing all words and settings. __**THIS ACTION IS IRREVERSIBLE!!!**__\\n\\nAre you sure you wish to do this? Reply **\\`yes\\`** to proceed.`).then(warningmsg => {\n\n\t\tconst collector = msg.channel.createMessageCollector(message => message.author.id === msg.author.id, {max:1, time:15000});\n\n\t\tcollector.on('end', collected => {\n\t\t\twarningmsg.delete();\n\t\t\tlet message = collected.map(mes => mes.content);\n\t\t\tif (message[0] && message[0].toLowerCase().includes(\"yes\")) {\n\t\t\t\tmsg.reply(\"This is your only confirmation message. Are you sure you wish to perform this action? Reply **`yes`** to proceed.\").then(confirmationreply => {\n\t\t\t\t\tconst confirmcollector = msg.channel.createMessageCollector(message => message.author.id === msg.author.id, {max:1, time:15000});\n\t\t\t\t\t\n\t\t\t\t\tconfirmcollector.on('end', confirmcollected => {\n\t\t\t\t\t\tconfirmationreply.delete();\n\t\t\t\t\t\tmessage = confirmcollected.map(mes => mes.content);\n\t\t\t\t\t\tif (message[0] && message[0].toLowerCase().includes(\"yes\")) {\n\t\t\t\t\t\t\tdb.delete(`servers.${msg.guild.id}`);\n\t\t\t\t\t\t\tmsg.reply(\"Confirmed! Bad Word System has been reset for this server.\");\n\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\tmsg.reply(\"Cancelled the reset command.\");\n\t\t\t\t\t\t\tcache.index++; return Actions.callNextAction(cache);\n\t\t\t\t\t\t}\n\t\t\t\t\t});\n\t\t\t\t});\n\t\t\t} else {\n\t\t\t\tmsg.reply(\"Cancelled the reset command.\");\n\t\t\t\tcache.index++; return Actions.callNextAction(cache);\n\t\t\t}\n\t\t});\n\t});\n})();",
+      "behavior": "1",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    }
+  ],
+  "comType": "0"
+}
