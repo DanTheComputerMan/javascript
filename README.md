@@ -1,2 +1,5 @@
 # javascript
-All my Javascript projects.
+
+```
+This super-structure is being phased out to a more modular repository structure.
+```
